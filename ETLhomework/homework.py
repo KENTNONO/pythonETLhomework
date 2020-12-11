@@ -1,3 +1,5 @@
+## 練習從 list 頁面下載資源
+##
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -15,7 +17,7 @@ headers = {
     "X-Amzn-Trace-Id": "Root=1-5fbb6477-721f587d61090d9270800b75"
 }
 
-
+##舊的方法
 # url = 'https://www.104.com.tw/jobs/search/?jobsource=2018indexpoc&ro=0'
 # url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword=%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88&expansionType=area%2Cspec%2Ccom%2Cjob%2Cwf%2Cwktm&order=14&asc=0&page={}&mode=s&jobsource=2018indexpoc'
 # # url = 'https://www.google.com/search?q=%E8%A5%BF%E6%B4%8B%E6%A3%8B+%E6%88%B0%E8%A1%93&rlz=1C1CHBF_zh-TWTW923TW923&oq=%E8%A5%BF%E6%B4%8B&aqs=chrome.1.69i57j35i39j0i131i433l2j0i433l2j0i131i433j0.3806j0j7&sourceid=chrome&ie=UTF-8'
@@ -38,6 +40,8 @@ headers = {
 #         break
 
 # BeautifulSoup(我們拿到的文字,我們要的格式)
+
+##新的方法 發現有 json的方式拉資料
 url = 'https://www.104.com.tw/jobs/search/?jobsource=2018indexpoc&ro=0'
 url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword=%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88&expansionType=area%2Cspec%2Ccom%2Cjob%2Cwf%2Cwktm&order=14&asc=0&page={}&mode=s&jobsource=2018indexpoc'
 url3 ='https://www.104.com.tw/jobs/search/list?ro=0&kwop=7&keyword=%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88&expansionType=area%2Cspec%2Ccom%2Cjob%2Cwf%2Cwktm&order=14&asc=0&page={}&mode=s&jobsource=2018indexpoc'

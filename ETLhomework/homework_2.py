@@ -1,3 +1,4 @@
+##練習取得內頁
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -16,7 +17,7 @@ headers = {
     "X-Amzn-Trace-Id": "Root=1-5fbb6477-721f587d61090d9270800b75"
 }
 
-
+##從json取得發現 referer 一定要加
 url = 'https://www.104.com.tw/jobs/search/?jobsource=2018indexpoc&ro=0'
 url = 'https://www.104.com.tw/job/ajax/content/745ak'
 #url = 'https://www.google.com/search?q=%E8%A5%BF%E6%B4%8B%E6%A3%8B+%E6%88%B0%E8%A1%93&rlz=1C1CHBF_zh-TWTW923TW923&oq=%E8%A5%BF%E6%B4%8B&aqs=chrome.1.69i57j35i39j0i131i433l2j0i433l2j0i131i433j0.3806j0j7&sourceid=chrome&ie=UTF-8'
